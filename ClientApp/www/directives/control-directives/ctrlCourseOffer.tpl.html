@@ -1,0 +1,52 @@
+<h4>Course Offer</h4>
+
+<div ng-repeat='item in myfield track by $index'>
+	<div class='row'>
+		<div class="col">
+			<b>Course/Offering Code</b>
+			<label class="item item-input">				
+			    <textarea placeholder="Title, Module names etc" ng-model='myfield[$index].qualdetails'></textarea>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Framework/Qualification Title</b>
+			<label class="item item-input">				
+			    <input type='date' placeholder="State year where exact date is unknown" ng-model='myfield[$index].datecompleted'></input>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Mode of Delivery</b>
+			<label class="item item-input">				
+			    <input type='text' placeholder="Entry Level 1, Level 2 etc" ng-model='myfield[$index].level'></input>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Start Date</b>
+			<label class="item item-input">				
+			    <input type='text' placeholder="Entry Level 1, Level 2 etc" ng-model='myfield[$index].level'></input>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Expected End Date</b>
+			<label class="item item-input">				
+			    <input type='text' placeholder="Entry Level 1, Level 2 etc" ng-model='myfield[$index].level'></input>
+			  </label>						
+		</div>		
+	</div>
+
+	<hr>
+</div>
+<button ng-click='addrow()'>Add Row</button>
+

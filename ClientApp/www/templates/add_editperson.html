@@ -1,0 +1,25 @@
+<ion-view>
+<ion-content ng-controller="AddEditPersonCtrl">
+<h1>Add Person</h1>
+
+
+<label class='item item-input'>
+	<SPAN class='input-label'>Name</SPAN>
+	<INPUT type='text' ng-model='frm.PersonalDetails.name'>
+</label>
+
+<label class='item item-input'>
+	<SPAN class='input-label'>Author</SPAN>
+	<INPUT type='text' ng-model='frm.PersonalDetails.author'>
+</label>
+
+<label class='item item-input'>
+	<SPAN class='input-label'>isbn</SPAN>
+	<INPUT type='text' ng-model='frm.PersonalDetails.isbn'>
+</label>
+
+<br>
+<button class='button' ng-click='AddPerson()'>Add</button>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+ <label class="item item-input item-select">
+    <div class="input-label">
+      {{mylbl}}
+    </div>
+
+    <select 
+	ng-model='myfield'  
+	ng-options="myoptions.description for myoptions in myoptions track by myoptions.id">
+ 	<option value="">-- Please select --</option>
+</select>
+</label>

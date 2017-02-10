@@ -1,0 +1,71 @@
+<div class="row">						
+				<div class="col col-33">				
+
+					 <label class="item item-input item-select">
+					    <div class="input-label">
+
+					    </div>
+					    <select  
+					    	ng-change='onParentCourseChange(myfield)' 
+					    	ng-model='myfield'  
+					    	ng-options="myoptions.MainOfferingName for myoptions in myoptions track by myoptions.MainOfferingCode">
+					     <option value="">-- Please select --</option>
+					    </select>
+					  </label>
+					
+					  <div ng-repeat='item in course_offeringjson track by $index'>					  	
+						
+						<div class='row'>
+							<div class="col col-33">
+								<b>Course/Offering Code</b>							
+							</div>
+							
+							<div class="col col-33">
+								<b>Framework</b>							
+							</div>
+
+							<div class="col col-33">
+								&nbsp;
+							</div>
+
+							<div class="col col-33">
+								&nbsp;
+							</div>
+
+							<div class="col col-33">
+								&nbsp;
+							</div>
+
+						</div>
+
+						<div class='row'>							
+							<div class="col col-33">
+								{{item.MainOfferingCode}} ({{item.ChildOffering}})
+							</div>
+
+							<div class="col col-33">
+								{{item.ChildOfferingName}}
+							</div>
+
+							<div class="col col-33">
+								<label class="item item-input">				
+								    <input type='text' placeholder="Mode of delivery" ng-model='frm.PersonalDetails.course_offeringjson[$index].modeOfDelivery'></input>
+								  </label>						
+							</div>
+
+							<div class="col col-33">
+								<label class="item item-input">				
+								    <input type='text' placeholder="Start date" ng-model='frm.PersonalDetails.course_offeringjson[$index].startDate'></input>
+								  </label>						
+							</div>
+
+							<div class="col col-33">
+								<label class="item item-input">				
+								    <input type='text' placeholder="Expected End Date" ng-model='frm.PersonalDetails.course_offeringjson[$index].expectedEndDate'></input>
+								  </label>						
+							</div>
+
+						</div>
+					  </div>
+				</div>							
+			</div>

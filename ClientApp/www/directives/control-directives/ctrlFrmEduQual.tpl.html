@@ -1,0 +1,34 @@
+<h4>Previous Education & Qualifications</h4>
+
+<div ng-repeat='item in myfield track by $index'>
+	<div class='row'>
+		<div class="col">
+		<h4 ng-click='removerow($index)'><span class="ion-close-round" style='font-size:30px;' data-pack="default"></span>&nbsp;&nbsp;Remove</h4>
+			<b>Details of qualification completed and achieved</b>
+			<label class="item item-input">				
+			    <textarea placeholder="Title, Module names etc" ng-model='myfield[$index].qualdetails'></textarea>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Date qualification completed</b>
+			<label class="item item-input">				
+			    <input type='date' placeholder="State year where exact date is unknown" ng-model='myfield[$index].datecompleted'></input>
+			  </label>						
+		</div>		
+	</div>
+
+	<div class='row'>
+		<div class="col">
+			<b>Level achieved</b>
+			<label class="item item-input">				
+			    <input type='text' placeholder="Entry Level 1, Level 2 etc" ng-model='myfield[$index].level'></input>
+			  </label>						
+		</div>		
+	</div>
+	<div class='inner-section-line'></div>
+</div>
+<button class='button button-dark' ng-click='addrow()'>Add Row</button>
+

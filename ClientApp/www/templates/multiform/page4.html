@@ -1,0 +1,214 @@
+<ion-view>    	
+	<ion-content class='padding'>		
+		
+		<div class='padding section-border'>
+			<h3>Course List</h3>						
+			
+			<div class="row">						
+				<div class="col col-100">				
+
+					 <label class="item item-input item-select">
+					    <div class="input-label">
+							Course
+					    </div>
+					    <select ng-change='onParentCourseChange(frm.PersonalDetails.main_offeringcode)' ng-model='frm.PersonalDetails.main_offeringcode'  ng-options="c.MainOfferingName for c in parentcourse track by c.OfferingID">
+					     <option value="">-- Please select --</option>
+					    </select>
+					  </label>
+						
+					<div class="row">
+						<div class="col col-50">
+							<ctrl-date myfield='frm.PersonalDetails.main_offeringcode.StartDate' mylbl='Start Date'></ctrl-date>						    	
+						</div> 
+					</div>
+					
+					<div class="row">
+						<div class="col col-50">
+							<ctrl-date myfield='frm.PersonalDetails.main_offeringcode.EndDate' mylbl='End Date'></ctrl-date>								   	
+						</div> 
+					</div>
+					
+					<div class="row">
+						<div class="col col-50">
+							<label class="item item-input">				
+							    <input type='text' placeholder="Mode of delivery" ng-model='frm.PersonalDetails.main_offeringcode.ModeOfDelivery'></input>
+							  </label>						
+						</div>
+					</div>
+					
+					<div class='row'>
+							<div class="col col-33">
+								<b>Course/Offering Code</b>							
+							</div>							
+							<div class="col col-33">
+								<b>Framework</b>							
+							</div>						
+						</div>
+					  <div ng-repeat='item in frm.PersonalDetails.course_offeringjson track by $index'>					  										
+						<div class='row'>							
+							<div class="col col-33">
+								{{item.MainOfferingCode}} ({{item.ChildOffering}})
+							</div>
+							<div class="col col-100">
+								{{item.ChildOfferingName}}
+							</div>							
+						</div>						
+					  </div>
+				</div>							
+			</div>
+
+			<div class="row">						
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.offsitedelivery_postcode' mylbl='Off site delivery venue postcode:'></ctrl-input-string>
+				</div>							
+			</div>
+			
+			<br><b class='padding'>To be completed when appropriate:</b>
+
+			<div class="row">						
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.esf_projnum' mylbl='ESF Project Number:'></ctrl-input-string>
+				</div>							
+			</div>
+
+			<div class="row">						
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.esf_dosssiernum' mylbl='ESF Dossier Number:'></ctrl-input-string>
+				</div>							
+			</div>
+
+			<div class="row">						
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.franchise_partner' mylbl='Franchise Partner:'></ctrl-input-string>
+				</div>							
+			</div>
+
+			<div class="row">						
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.franchise_ukprn' mylbl='Franchise UKPRN:'></ctrl-input-string>
+				</div>							
+			</div>
+		</div>
+
+		<h3>DECLARATION</h3>
+		<div class='section-border'>
+			
+			<b class='padding'>
+			You can opt out of contact for other purposes by ticking any of the following boxes if you do not wish to be contacted:
+			</b>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.priv_optout_opps' mylbl="About courses or learning opportunities" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.priv_optout_research' mylbl="For surveys and research" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.priv_optout_post' mylbl="By post" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.priv_optout_phone' mylbl="By phone" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.priv_optout_email' mylbl="By e-mail" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+			
+			<br><b class='padding'>
+			If you wish to opt out of being contacted by the College, please tick any of the following boxes:
+			</b>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.dec_optout_email' mylbl="by e-mail" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.dec_optout_sms' mylbl="by Text Messaging" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.dec_optout_social' mylbl="by Social Media" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class='row'>
+				<div class="col col-100">					
+					<ctrl-toggle myfield='frm.PersonalDetails.dec_optout_other' mylbl="by other means of contact" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+		</div>
+		
+		<br>
+		<div class='section-border'>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.dec_tutorname' mylbl='Assessor / Tutor Name:'></ctrl-input-string>	
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.dec_emp_sig' mylbl='Employer Authorised Signatory Name:'></ctrl-input-string>	
+				</div>		
+			</div>
+		
+			<br>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-signature canvasid='signatureStudent' myfield='frm.PersonalDetails.dec_student_sig' mylbl='Student Signature:'></ctrl-signature>	
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.dec_student_date' mylbl='Date:'></ctrl-date>
+				</div>		
+			</div>
+
+			<br>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-signature canvasid='signatureAssessor' myfield='frm.PersonalDetails.dec_tutor_sig' mylbl='Assessor / Tutor Signature:'></ctrl-signature>	
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.dec_tutor_date' mylbl='Date:'></ctrl-date>
+				</div>		
+			</div>
+
+			<br>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-signature canvasid='signatureEmployer' myfield='frm.PersonalDetails.dec_empauth' mylbl='Employer Authorised Signatory Signature:'></ctrl-signature>	
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.dec_empauth_date' mylbl='Date:'></ctrl-date>
+				</div>		
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,10 @@
+<ul class="list padding">
+	{{mylbl}}
+	<Br><br>
+	<li class="item item-checkbox" ng-repeat='item in mylist track by $index'>
+	  <label class="checkbox">
+	   <input type="checkbox" ng-model="item.selected">
+	  </label>
+   	<p ng-bind-html="item.text"></p>
+	</li>
+<ul>

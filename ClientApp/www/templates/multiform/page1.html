@@ -1,0 +1,338 @@
+<ion-view>    	
+	<ion-content class='padding'>
+		
+		<h3>For The Assessor</h3>
+		<div class='section-border'>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.assessorname' mylbl='Assessor Name:'></ctrl-input-string>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.enrolling_tutor' mylbl='Enrolling Tutor:'></ctrl-input-string>
+				</div>
+			</div>
+		</div>
+
+		<h3>PERSONAL DETAILS</h3>
+		<p>Please complete this section</p>
+		
+		<div class='section-border'>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static 
+						myfield='frm.PersonalDetails.has_attended_bury_college' 
+						mylbl='Have you attended Bury College before?'
+						myoptions='["Yes","No"]'>					
+					</ctrl-dropdown-static>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class="col col-100">
+					<ctrl-dropdown-static myoptions='["Male","Female"]' myfield='frm.PersonalDetails.sex' mylbl='Sex:'></ctrl-dropdown>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.ni_number' mylbl='National Insurance No:'></ctrl-input-string>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-50">
+					<ctrl-dropdown-static 
+						myfield='frm.PersonalDetails.title' 
+						mylbl='Title:'
+						myoptions='["Mr","Ms","Mrs","Miss","Other"]'
+						>
+						</ctrl-dropdown-static>
+				</div>
+
+				<div class="col col-50">
+					<ctrl-input-string myfield='frm.PersonalDetails.title_other' mylbl='Other (title):'></ctrl-input-string>
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="col col-50">
+					<ctrl-date myfield='frm.PersonalDetails.dob' mylbl='Date of birth'></ctrl-date>
+				</div>			
+				
+				<div class="col col-50">
+					<ctrl-input-string myfield='frm.PersonalDetails.age_atstart' mylbl='Age at start of course:'></ctrl-input-string>
+				</div>	
+				
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.surname' mylbl='Surname / family name:'></ctrl-input-string>					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.forename' mylbl='Forename:'></ctrl-input-string>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.middlename' mylbl='Middlename:'></ctrl-input-string>
+				</div>
+			</div>				
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.address1' mylbl='Address 1:'></ctrl-input-string>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.address2' mylbl='Address 2:'></ctrl-input-string>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.address3' mylbl='Address 3:'></ctrl-input-string>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.address4' mylbl='Address 4:'></ctrl-input-string>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					Post Code					
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col col-10">
+					<label class="item item-input">
+						
+						<input type="text" ng-model='frm.PersonalDetails.postcode_in' limit-to="3">						
+					</label>
+				</div>
+				<div class="col col-10">
+					<label class="item item-input">
+						
+						<input type="text" ng-model='frm.PersonalDetails.postcode_out' limit-to="3">
+					</label>
+				</div>
+			</div>							
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.tel_home' mylbl='Home tel no:'></ctrl-input-string>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.email_addr' mylbl='e-mail address:'></ctrl-input-string>
+				</div>								
+			</div>
+			
+			<div class='row'>
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.tel_daytime' mylbl='Day time tel no:'></ctrl-input-string>
+				</div>				
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.tel_mobile' mylbl='Mobile tel no:'></ctrl-input-string>
+				</div>	
+			</div>
+
+		</div>
+
+		<h3>ADDITIONAL LEARNING SUPPORT</h3>
+		<P>This information will enable us to identify and meet the needs you may have</P>
+		
+		<div class='section-border'>
+			<div class="row">
+				<div class="col">
+					<ctrl-checkbox-dynm 
+						myfield='frm.PersonalDetails.additional_learning_supp' 
+						mylbl='Do you consider yourself to have a learning difficulty and/or disability or health problem? Which of the following do you have?'
+						mylist='frm.PersonalDetails.addlearnsupp_learndiff_listjson'
+						></ctrl-checkbox-dynm>
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					Please indicate which is your primary learning difficulty, disability or health problem by using the codes above
+					<ctrl-input-string myfield='frm.PersonalDetails.addlearnsupp_prim_learndiff' mylbl='Please specify:'></ctrl-input-string>
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					Have you received supported examination arrangements in the past?
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.addlearnsupp_has_rec_exam' 
+						mylbl='Please specify :'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>	
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					Have you received additional learning support in the past?
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.addlearnsupp_has_rec_addlearn' 
+						mylbl='Please specify :'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					Do you have an LDA, an Education, Health & Care Plan or other statement of special educational need?
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.addlearnsupp_has_lda' 
+						mylbl='Please specify :'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					Are you in care or recently left care?
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.addlearnsupp_are_incare' 
+						mylbl='Please specify :'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					Are you a full time carer for a dependant relative living at home?
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.addlearnsupp_are_fulltime_carer' 
+						mylbl='Please specify :'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>	
+			</div>
+
+		</div>
+
+		<h3>ETHNIC ORIGIN</h3>
+		<P>Please tick as appropriate</P>
+		
+		<div class='section-border'>
+			<div class="row">
+				<div class="col">
+					<ctrl-checkbox-dynm 
+						myfield='frm.PersonalDetails.ethnic_origin' 
+						mylbl=''
+						mylist='frm.PersonalDetails.ethnic_origin'
+						></ctrl-checkbox-dynm>
+				</div>		
+			</div>
+		</div>
+		
+
+		<h3>ELIGIBILITY</h3>
+		<P>Please tick as appropriate</P>
+		
+		<div class='section-border'>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.elig_has_britishpassport' 
+						mylbl='Are you British or do you have a British Passport?'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<!-- <ctrl-input-string myfield='frm.PersonalDetails.elig_country_nationality' mylbl="If 'N0', what is your Country of Nationality:"></ctrl-input-string>			 -->
+
+					<label class="item item-input item-select">
+					    <div class="input-label">
+					      Country of Nationality
+					    </div>
+						
+					    <select 					    
+						ng-model='frm.PersonalDetails.elig_country_nationality'  
+						ng-options="Nationality.Description for Nationality in Nationality track by Nationality.NationalityID">						
+					 	<option  value="">-- Please select --</option>
+					</select>
+					</label>
+
+				</div>				
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.elig_isuk_resident' 
+						mylbl='Have you been resident in the UK, EU, or EEA continuously for at least the previous 3 years?'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>		
+			</div>
+			
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.elig_is_refugee' 
+						mylbl='Do you have refugee status?'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>		
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.elig_has_visa' 
+						mylbl='Do you have a visa/residency permit?'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>		
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static  
+						myfield='frm.PersonalDetails.elig_is_asylum' 
+						mylbl='Are you an Asylum Seeker?'
+						myoptions='["Yes","No"]'>
+					</ctrl-dropdown-static >
+				</div>		
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.elig_expiredate_asylum' mylbl='If Yes, date of expiry:'></ctrl-date>
+				</div>			
+			</div>
+		</div>			
+		
+	</ion-content>
+</ion-view>

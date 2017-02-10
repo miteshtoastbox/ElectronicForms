@@ -1,0 +1,78 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-header-bar align-title="center" class="bar bar-header bar-positive">
+      <div>
+      <h1 class="title">Workplace Learning Enrolment Form</h1>
+      </div>
+    </ion-header-bar>
+    <ion-nav-view name="mainContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Form Sections</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/multiform/page1">
+          <span class='form_nav_left'>Personal Details</span>
+        </ion-item>
+
+        <ion-item menu-close href="#/multiform/page2">
+          <span class='form_nav_left'>Previous&nbsp;Qualifications<span>
+        </ion-item>
+
+        <ion-item menu-close href="#/multiform/page3">
+          <span class='form_nav_left'>Employment Status</span>
+        </ion-item>
+
+        <ion-item menu-close href="#/multiform/page4">
+          <span class='form_nav_left'>Declaration</span>
+        </ion-item>
+        
+        <br><Br><br><Br>
+         <ion-item menu-close ng-click='SaveForm()'>
+          
+          <button class="button button-full button-positive large_button">
+            <i class="ion-checkmark-circled">&nbsp;SAVE</i>
+          </button>
+
+        </ion-item>    
+
+        <ion-item menu-close ng-click='Exit()'>
+
+        <button class="button button-full">
+           <b>Exit</b>
+        </button>
+         
+        </ion-item>
+
+        <!-- <ion-item menu-close href="#/multiform/page2">
+          Education & Qualifications
+        </ion-item>
+        <ion-item menu-close href="#/multiform/page3">
+          Employment Status <br>& Eligibility
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Declaration
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Save
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Exit Without Saving
+        </ion-item> -->
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

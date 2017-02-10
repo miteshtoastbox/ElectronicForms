@@ -1,0 +1,14 @@
+<a class='button button-balanced' ng-click="showSig();">{{mylbl}}</a> 
+<script id="image-modal.html" type="text/ng-template">
+  <div class="modal image-modal transparent">
+      <ion-pane class="transparent">
+          <canvas id='{{canvasid}}' width='700' height='280' style='border: 0px solid black;'></canvas>
+    <hr>         
+    <Div style='text-align: center;'>
+    	<h3>Please Sign Above The Line</h3>     
+    	<a class='button button-positive large_button' ng-click='saveCanvas()'>Save</a>
+    </Div>
+      </ion-pane>
+  </div>
+</script>
+<img ng-model='myfield' ng-src='{{myfield}}'/>

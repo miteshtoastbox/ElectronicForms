@@ -1,0 +1,110 @@
+<ion-view>    	
+	<ion-content class='padding'>
+		
+		<h3>PREVIOUS EDUCATION AND QUALIFICATIONS</h3>		
+		
+		<div class='section-border'>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-frm-edu-qual myfield='frm.PersonalDetails.edu_eduqualjson' mylbl=''></ctrl-frm-edu-qual>
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					Summary of previous skills for APL purposes relevant to Apprenticeship enrolled on:
+					<ctrl-input-string myfield='frm.PersonalDetails.edu_apl_skills' mylbl='Summary'></ctrl-input-string>
+				</div>			
+			</div>				
+
+		</div>		
+
+		<h3>HOUSEHOLD SITUATION</h3>
+
+		<div class='section-border'>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.hsehold_hhs1' mylbl='HHS1 No household member is in employment and the household includes one or more dependent children' myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.hsehold_hhs2' mylbl='HHS2 No household member is in employment and the household does not include any dependent children' myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.hsehold_hhs3' mylbl='HHS3 Learner lives in a single adult household with dependent children' myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.hsehold_98' mylbl='Prefer not to say' myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.hsehold_99' mylbl='None of these statements apply' myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>	
+		</div>
+
+		<h3>EMERGENCY CONTACT DETAILS</h3>
+
+		<div class='section-border'>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emerg_contactname' mylbl='Contact name:'></ctrl-input-string>
+				</div>			
+			</div>				
+
+			<div class="row">
+				<div class="col col-100">					
+
+					<label class="item item-input item-select">
+					    <div class="input-label">
+					      Relationship with contact
+					    </div>
+						
+					    <select 					    
+						ng-model='frm.PersonalDetails.emerg_relationwith'  
+						ng-options="ContactRelationship.Description for ContactRelationship in ContactRelationship track by ContactRelationship.StudentContactRelationshipID">						
+					 	<option  value="">-- Please select --</option>
+					</select>
+					</label>
+
+				</div>			
+			</div>				
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emerg_tel_home' mylbl='Tel Home:'></ctrl-input-string>
+				</div>			
+			</div>				
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emerg_tel_work' mylbl='Tel Work:'></ctrl-input-string>
+				</div>			
+			</div>		
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emerg_tel_mobile' mylbl='Tel Mobile:'></ctrl-input-string>
+				</div>			
+			</div>		
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emerg_email' mylbl='Email:'></ctrl-input-string>
+				</div>			
+			</div>		
+
+		</div>
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+{
+  "name": "eflCLient",
+  "app_id": "",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "18.48.477.13"
+    }
+  ]
+}

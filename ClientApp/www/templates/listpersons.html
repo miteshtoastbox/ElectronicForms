@@ -1,0 +1,33 @@
+<ion-view>
+
+ <ion-header-bar align-title="center" class="bar-positive">
+	<div class="buttons">
+		<a class="button" href='#/mainmenu'>Back To Main Menu</a>
+	</div>
+    
+    <h1 class="title">Workplace Learning / Apprenticeship Enrolment Form & Learning Agreement</h1>
+    </ion-header-bar>
+
+<ion-content class='padding'>
+
+<h2>Workplace Learning Forms</h2>
+
+	<DIV  ng-repeat="o in PersonList">
+      <p>&nbsp;</p>
+       {{o.employer}}
+      <div class="row">
+        <div class="col col-25">
+          <h3>{{o.forename}} {{o.surname}}</h3>
+        </div>
+
+        <div class="col col-100">          
+
+          <a ng-click="loadeditform(o.PK_PersonDetails_id)" style='font-size:20px;float:left;margin-right: 50px;' class="button icon-right ion-compose button-dark">Edit Form</a>
+
+          <a ng-click="send(o.PK_PersonDetails_id)" style='font-size:20px;float:left;margin-right: 50px;' class="button icon-right ion-ios-upload-outline button-positive">Submit To Server</a>
+        </div>
+      </div>            
+    </DIV>
+
+</ion-content>
+</ion-view>

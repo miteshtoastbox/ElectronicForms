@@ -1,0 +1,82 @@
+<ion-view>
+	<ion-header-bar align-title="center" class="bar-positive">
+	    <h1 class="title">Controls Area</h1>
+	</ion-header-bar>
+
+	<ion-content>	
+
+	<div class="row">
+			<div class="col col-33">
+				<ctrl-input-string myfield='frm.PersonalDetails.name' mylbl='Name:'></ctrl-input-string>
+			</div>			
+		</div>
+
+		<div class="row">
+			<div class="col col-50">
+				<ctrl-dropdown-static 
+					myfield='frm.PersonalDetails.title' 
+					mylbl='Title:'
+					myoptions='["Mr","Ms","Mrs","Miss","Other"]'
+					>
+					</ctrl-dropdown-static>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-33">
+				<ctrl-dropdown-static w
+					myfield='frm.PersonalDetails.has_attended_bury_college' 
+					mylbl='Have you attended Bury College before?'
+					myoptions='["Yes","No"]'>					
+				</ctrl-dropdown-static>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-33">
+				<ctrl-date myfield='frm.PersonalDetails.dob' mylbl='Date of birth'></ctrl-date>
+			</div>			
+		</div>
+		
+		
+		<div class="row">
+			<div class="col">
+			<H3>Additional Learning Support</H3>
+				<ctrl-checkbox-dynm 
+					mylbl='Do you consider yourself to have a learning difficulty and/or disability or health problem? Which of the following do you have?'
+					mylist='frm.PersonalDetails.additional_learning_supp'
+					></ctrl-dropdown>
+			</div>		
+		</div>
+
+		<div class='row'>
+			<div class="col col-33">
+				<ctrl-toggle myfield='frm.PersonalDetails.inpaid_employment' mylbl='In Paid employment'></ctrl-toggle>
+			</div>
+		</div>
+						
+	
+		<div class='row'>
+			<div class="col col-33">
+				<ctrl-course-offer myfield='frm.EduQualHistory.jsondata' mylbl=''></ctrl-course-offer>
+			</div>
+		</div>
+
+		<br><br><hr>
+		<button ng-click="AddFormInstance()">Add Form Instance</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button class="button button-positive" ng-click="AddFormToDB()">ADD FORM TO DB</button>
+		<br><br><hr>
+	
+		
+	<br><Br>
+	<div>
+		<h3>List Records</h3>	
+		<div ng-repeat="o in booksManager._pool">
+			<a ng-click='loadthisform($index+1);'>{{o.PersonalDetails.title}}</a>			
+		</div>
+	</div>	
+
+	</ion-content>
+	
+</ion-view>

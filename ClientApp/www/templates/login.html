@@ -1,0 +1,29 @@
+<ion-view>    	
+	<ion-content class='padding'>
+		
+		<h3>Login</h3>
+		<div class='section-border'>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='login.username' mylbl='Username:'></ctrl-input-string>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-100">					
+					<label class="item item-input">
+						<span class="input-label">Password:</span>
+						<input type="password" ng-model='login.password'>
+					</label>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="col col-100">
+					<button class='button button-dark' ng-click='dologin(login)'>Login</button>
+				</div>
+			</div>			
+			
+		</div>
+
+	</ion-content>
+</ion-view>

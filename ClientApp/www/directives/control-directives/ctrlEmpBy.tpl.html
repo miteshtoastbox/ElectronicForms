@@ -1,0 +1,13 @@
+<label class="item item-input">
+	<span class="input-label">{{mylbl}}</span>
+	<input type="text" ng-change="empbyOnChange()" ng-model='myfield'>
+	  
+</label>
+
+<button ng-click="orgClear()" class="button button-clear">
+    	Cancel
+  	</button>  
+  	
+<div class="list">
+    <li class="item" ng-click="orgOnClick(org)" ng-repeat="org in OrgData">{{org.Name}}</li>
+ </div>

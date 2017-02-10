@@ -1,0 +1,435 @@
+<ion-view>    	
+	<ion-content class='padding'>		
+		
+		<h3>EMPLOYMENT STATUS AND ELIGIBILITY FOR APPRENTICESHIP AND WORKPLACE LEARNING</h3>
+		
+		<div class='section-border'>
+			<B class='padding'>Employed learners please complete this section:</B>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-emp-by myfield='frm.PersonalDetails.emplrn_empby' mylbl='I am employed by'></ctrl-emp-by>
+					and have a Contract of Employment and the course is relevant to my employment.
+				</div>		
+			</div>
+			<br>
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static 
+						myfield='frm.PersonalDetails.emplrn_contracttype' 
+						mylbl='Type of contract'
+						myoptions='["Permanent","Fixed term"]'>					
+					</ctrl-dropdown-static>
+				</div>		
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.emplrn_fixedcontract_endate' mylbl='If fixed term, date contract ends:'></ctrl-date>
+				</div>				
+			</div>				
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.emplrn_emp_startdate' mylbl='Employment start date:'></ctrl-date>
+				</div>					
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emplrn_jobtitle' mylbl='Job title'></ctrl-input-string>
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emplrn_weekhrs' mylbl='Contracted weekly hours:'></ctrl-input-string>
+					(if not regular give average hours over last four weeks)
+				</div>					
+			</div>
+
+			<div>
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.emplrn_weeksal' mylbl='Weekly salary:'></ctrl-input-string>
+				</div>		
+			</div>
+			<br>
+			
+			<b class='padding'>Apprentices only - Justification for contracted hours of less than 30 per week:</b>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.emplrn_appr_situation' mylbl="Apprentice's personal situation" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>												
+
+			<div class="row"> 
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.emplrn_appr_30hrweek' mylbl="Industry / job role does not offer the possibility of a 30 hour week" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>	
+			</div>
+		</div>		
+		
+		<Br>
+		<div class='section-border'>
+			<B class='padding'>Self employed learners please complete this section:</B>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empslf_since' mylbl='I am self employed since (month &  year)'></ctrl-input-string>
+					and have registered my self employment with the HM Revenue and Customs.
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empslf_compname' mylbl='Company name:'></ctrl-input-string>				
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empslf_hrsperweek' mylbl='Number of hours worked per week:'></ctrl-input-string>				
+				</div>		
+			</div>
+		</div>
+		
+		<br>
+
+		 <div class='section-border'>
+            <b class='padding'>ADDITIONAL INFORMATION:</b>
+			
+			<div class="row">
+                <div class="col col-75">
+                    <ctrl-toggle myfield='frm.PersonalDetails.criminal_conviction' mylbl='Do you have any criminal convictions? (excl. driving offences)' myoptions='["Yes","No"]'></ctrl-toggle>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-75">
+                    <ctrl-toggle myfield='frm.PersonalDetails.belongto_religion' mylbl='Would you say you belong to a religion?' myoptions='["Yes","No"]'></ctrl-toggle>
+                </div>
+            </div>            
+
+            <div class="row">
+                <div class="col">
+                    <ctrl-dropdown-dynamic mylbl='Religion'
+                                           myfield='frm.PersonalDetails.religion'
+                                           myoptions='ReligionLookup'>
+                    </ctrl-dropdown-dynamic>
+                </div>
+            </div>
+
+             <div class="row">
+                <div class="col col-100">                    
+                    <ctrl-input-string myfield='frm.PersonalDetails.religion_other' mylbl='Religion (If Other):'></ctrl-input-string>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <ctrl-dropdown-dynamic mylbl='Sexuality'
+                                           myfield='frm.PersonalDetails.sexuality'
+                                           myoptions='SexualityLookup'>
+                    </ctrl-dropdown-dynamic>
+                </div>
+            </div>
+        </div>
+
+		<div class='section-border'>
+			<B class='padding'>All learners please complete this section:</B>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_empaddr' mylbl='Employer address:'></ctrl-input-string>	
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_postcode' mylbl='Employer postcode:'></ctrl-input-string>	
+				</div>						
+			</div>
+
+			<div>
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_tel' mylbl='Employer tel:'></ctrl-input-string>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_contactperson' mylbl='Contact person at place of employment:'></ctrl-input-string>
+					(Name of person who has authorised your training)	
+				</div>						
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_mentorname' mylbl='Your workplace mentor name:'></ctrl-input-string>					
+				</div>						
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_mentoremail' mylbl='Mentor email:'></ctrl-input-string>		
+				</div>						
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_biznature' mylbl='Nature of company business:'></ctrl-input-string>					
+				</div>										
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_compsize' mylbl='Size of company:'></ctrl-input-string>		
+					(Number of aggregated employees)			
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_edsnum' mylbl='EDS Number:'></ctrl-input-string>		
+					(Office use)
+				</div>						
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-dropdown-static 
+						myfield='frm.PersonalDetails.empall_govfund' 
+						mylbl='Are you on any other Government funded scheme:'
+						myoptions='["Yes","No"]'>					
+					</ctrl-dropdown-static>
+				</div>					
+			</div>			
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.empall_govfund_details' mylbl='Please specify:'></ctrl-input-string>						
+				</div>	
+			</div>
+		</div>		
+		
+
+		<h3>EMPLOYMENT STATUS PRIOR TO COMMENCEMENT OF THIS PERIOD OF APPRENTICESHIP / TRAINING</h3>
+		
+		<div class='section-border'>
+						
+			<div class="row">
+				<div class="col">					
+				    <ctrl-dropdown-dynamic 
+				    	mylbl='Employment Status'
+				    	myfield='frm.PersonalDetails.empstat_employmentstatusjson'
+				    	myoptions='EmpStatusLookup'>
+				    </ctrl-dropdown-dynamic>					 
+				</div>		
+			</div>
+		
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_risk_neet' mylbl="Risk of NEET aged 14-15 (ESF only)" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>			
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_in_fulltime' mylbl="In full time education or training" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>			
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_self_emp' mylbl="Self employed" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>		
+
+			<br><b class='padding'>If unemployed:</b>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unemp_6' mylbl="Unemployed for less than 6 months" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>											
+			</div>		
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_jsa' mylbl="In receipt of Job Seekers Allowance" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unemp_11' mylbl="Unemployed for 6 - 11 months" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>									
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_esa_wrag' mylbl="In receipt of Employment & Support Allowance Work Related Activity Group (ESA WRAG)" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>		
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unemp_23' mylbl="Unemployed for 12 - 23 months" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unv_credit' mylbl="In receipt of Universal Credit" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>				
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unemp_35' mylbl="Unemployed for 24 - 35 months" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>	
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_otherbens' mylbl="In receipt of another state benefit other than JSA, Universal Credit or ESA (WRAG)" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.empstat_unemp_36' mylbl="Unemployed for 36 months or more" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>							
+			</div>	
+
+		</div>
+
+		<h3>COST OF TRAINING</h3>
+		
+		<div class='section-border'>
+			
+			<div class="col col-100">
+				<ctrl-input-string myfield='frm.PersonalDetails.cost_regfee' mylbl='Registration / Certification Exam Fee agreed (£):'></ctrl-input-string>					
+			</div>		
+
+			<div class="col col-100">
+				<ctrl-input-string myfield='frm.PersonalDetails.cost_empfee' mylbl='Employer Fee agreed (£):'></ctrl-input-string>					
+			</div>	
+
+			<div class="col col-100">
+				<ctrl-input-string myfield='frm.PersonalDetails.cost_learnerfee' mylbl='Learner Fee agreed (£):'></ctrl-input-string>					
+			</div>	
+
+			<div class="col col-100">
+				<ctrl-input-string myfield='frm.PersonalDetails.cost_loanfee' mylbl='24+ Advanced Learning Loan Fee agreed (£):'></ctrl-input-string>					
+			</div>	
+
+			<div class="col col-100">				
+				<ctrl-date myfield='frm.PersonalDetails.cost_loanapp_date' mylbl='24+ Advanced Learning Loan approved:'></ctrl-date>	
+			</div>	
+
+		</div>
+		
+
+		<h3>LEARNER REGISTRATION SERVICE (LRS)</h3>		
+
+		<div class='section-border'>
+			<b class='padding'>Please read carefully - your Assessor / Tutor will complete this section for you and then verify your identity</b>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.lrs_uniqueno' mylbl='Unique Learner Number:'></ctrl-input-string>
+				</div>					
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_schoolrelaltion' mylbl="Relationship with school" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_passport' mylbl="Passport" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_drivelic' mylbl="Driving Licence" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_idcard' mylbl="ID card or other form of national identification" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_nicard' mylbl="National Insurance Card" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_fundingcert' mylbl="Certificate on entitlement to funding" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_bankcard' mylbl="Bank Credit or Debit Card" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+			
+			<b class='padding'>Other verifications types could be:</b>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_photo' mylbl="Photographic security pass for place of employment" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_armedforces' mylbl="Armed forces service ID" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_re_enroll' mylbl="Re-enrolment of known student" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-toggle myfield='frm.PersonalDetails.lrs_examcert' mylbl="Examination certificates / results slip" myoptions='["Yes","No"]'></ctrl-toggle>
+				</div>			
+			</div>
+			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-input-string myfield='frm.PersonalDetails.lrs_other' mylbl='Other please specify'></ctrl-input-string>	
+				</div>	
+			</div>
+			
+			<br>			
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-signature canvasid='signatureCanvas' myfield='frm.PersonalDetails.lrs_checkedby' mylbl='Checked by (Assessor / Tutor signature):'></ctrl-signature>
+				</div>	
+			</div>						
+			<div class="row">
+				<div class="col col-100">
+					<ctrl-date myfield='frm.PersonalDetails.lrs_checkedby_date' mylbl='Date:'></ctrl-date>
+				</div>	
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>
+
